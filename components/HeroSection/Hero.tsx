@@ -1,6 +1,6 @@
 import React from "react";
 import { heroBackground } from "@/public/images/index";
-import { Header, BackgroundImage } from "../index";
+import { BackgroundImage } from "../index";
 import Image from "next/image";
 import { heroBox } from "@/public/icons";
 

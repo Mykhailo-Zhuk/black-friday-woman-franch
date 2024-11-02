@@ -1,11 +1,6 @@
 import React from "react";
-import { BackgroundImage, StaticHeader, StaticSubHeader } from "../index";
-import {
-  detailedAnalysisBackground,
-  detailedAnalysisWoman,
-  ideasSuggestionsBackground,
-  trolleyWithMoney,
-} from "@/public/images/index";
+import { BackgroundImage, StaticHeader } from "../index";
+import { detailedAnalysisBackground, detailedAnalysisWoman } from "@/public/images/index";
 import Image from "next/image";
 
 const DetailedAnalysis = () => {
@@ -43,7 +38,7 @@ const DetailedAnalysis = () => {
             className="absolute -left-12 -bottom-40 object-contain w-full h-full z-[5]"
           />
           <div className="absolute -bottom-72 -left-48 bg-headerColor w-[400px] aspect-square rounded-full z-0"></div>
-          <div className="max-w-[50%] ml-auto mb-40 relative z-10">
+          <div className="max-w-[60%] ml-auto mb-40 relative z-10">
             <p className="text-base mt-6 text-highlightColor">Негативні сторони:</p>
             <ul className="text-base mt-6 flex flex-col space-y-6 list-inside list-disc">
               <li>
