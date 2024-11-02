@@ -19,8 +19,8 @@
 
 # production
 /build
-/dockerfile
-/.dockerignore
+dockerfile
+.dockerignore
 
 # misc
 .DS_Store
