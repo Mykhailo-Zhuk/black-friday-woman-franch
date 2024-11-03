@@ -5,6 +5,7 @@ import {
   WhyFranchise,
   NumberOfFranchises,
   DetailedAnalysis,
+  CountdownTimer,
 } from "@/components/index";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyFranchise />
       <NumberOfFranchises />
       <DetailedAnalysis />
+      <CountdownTimer />
     </>
   );
 }
