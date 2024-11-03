@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "3000:3000" # Maps localhost:3000 to the container's port 3000
+    volumes:
+      - .:/app # Mounts the current directory to /app in the container
+      - /app/node_modules # Ensures node_modules is handled within the container
+    environment:
+      - NODE_ENV=development

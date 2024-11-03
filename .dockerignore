@@ -1,4 +1,7 @@
 node_modules
 .next
+.dockerignore
+Dockerfile
+docker-compose.yml
 .git
-*.md
+.md

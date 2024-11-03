@@ -20,6 +20,7 @@ const config: Config = {
       colors: {
         headerColor: "var(--headerColor)",
         highlightColor: "var(--highlightColor)",
+        mainBgColor: "var(--mainBgColor)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -10,8 +10,12 @@ import uCook from "./u-cook.png";
 import logoLight from "./franch-logo-light.png";
 import logoWhite from "./logo-white.png";
 import heroBox from "./hero-box.webp";
+import saleStraps from "./sale-straps.png";
+import blackFridayPinkIcon from "./black-friday-pink-icon.webp";
 
 export {
+  blackFridayPinkIcon,
+  saleStraps,
   heroBox,
   logoWhite,
   barKvitka,

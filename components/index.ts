@@ -11,8 +11,9 @@ export { default as Header } from "./Header/Header";
 export { default as Hero } from "./HeroSection/Hero";
 
 // WhatCompetitorsOffer
-export { default as WhatCompetitorsOffer } from "./WhatCompetitorsOffer/WhatCompetitorsOffer";
+export { default as BlackFridayLifeChanger } from "./BlackFridayLifeChanger/BlackFridayLifeChanger";
 
-// IdeasSuggestions
-export { default as IdeasSuggestions } from "./IdeasSuggestions/IdeasSuggestions";
-export { default as DetailedAnalysis } from "./IdeasSuggestions/DetailedAnalysis";
+// WhyFranchise
+export { default as WhyFranchise } from "./WhyFranchise/WhyFranchise";
+export { default as DetailedAnalysis } from "./WhyFranchise/DetailedAnalysis";
+export { default as NumberOfFranchises } from "./WhyFranchise/NumberOfFranchises";

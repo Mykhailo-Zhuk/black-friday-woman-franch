@@ -38,6 +38,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --headerColor: #e8ceb0;
+    --mainBgColor: rgb(232, 193, 183, 0.7);
     --highlightColor: #ffd93b;
   }
   .dark {

@@ -1,8 +1,9 @@
 import {
   Hero,
-  WhatCompetitorsOffer,
+  BlackFridayLifeChanger,
   Header,
-  IdeasSuggestions,
+  WhyFranchise,
+  NumberOfFranchises,
   DetailedAnalysis,
 } from "@/components/index";
 
@@ -11,8 +12,9 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <WhatCompetitorsOffer />
-      <IdeasSuggestions />
+      <BlackFridayLifeChanger />
+      <WhyFranchise />
+      <NumberOfFranchises />
       <DetailedAnalysis />
     </>
   );
