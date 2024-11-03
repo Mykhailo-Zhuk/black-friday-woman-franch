@@ -19,7 +19,7 @@ const IdeasSuggestions = () => {
         <p className="text-base mt-6 text-black">
           <span className="font-bold">Потужний бренд із відмінною репутацією.</span>
           <br />
-          Ми створили ім’я, яке впізнають і цінують і ви стаєте частиною цієї історії.
+          Ми створили ім&apos;я, яке впізнають і цінують і ви стаєте частиною цієї історії.
         </p>
         <p className="text-base mt-6 text-black">
           <span className="font-bold">Перевірені бізнес-моделі, що працюють.</span>

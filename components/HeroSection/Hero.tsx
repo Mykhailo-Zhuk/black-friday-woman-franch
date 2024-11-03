@@ -12,7 +12,7 @@ const Hero = () => {
             BLACK FRIDAY
           </h1>
           <p className="text-black font-semibold text-xl uppercase text-center font-openSans relative z-10">
-            ваша успішна кар'єра розпочнеться у цю пятницю!
+            ваша успішна кар&apos;єра розпочнеться у цю пятницю!
           </p>
           {/* Background image */}
           <div className="flex justify-center">

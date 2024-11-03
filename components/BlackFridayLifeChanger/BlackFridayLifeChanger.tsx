@@ -10,11 +10,11 @@ const BlackFridayLifeChanger = () => {
       <div className="max-w-xl mx-auto">
         <div className="relative px-5 pt-10">
           <div className="h-1 w-1/6 bg-headerColor mb-3 mt-6" />
-          <StaticHeader>«Чорна П’ятниця» — шанс, який змінить ваше життя!</StaticHeader>
+          <StaticHeader>«Чорна П&apos;ятниця» — шанс, який змінить ваше життя!</StaticHeader>
           <p className="mt-6 text-base text-white">
             Настав момент для рішучого кроку — ідеальний час перестати відкладати на завтра свою
-            мрію про власний бізнес. Цього Чорної П’ятниці Woman Frаnch відкриває двері для тих, хто
-            готовий змінити своє життя раз і назавжди.
+            мрію про власний бізнес. Цього Чорної П&apos;ятниці Woman Frаnch відкриває двері для
+            тих, хто готовий змінити своє життя раз і назавжди.
           </p>
           <div className="flex">
             <p className="text-base text-white w-3/5 pt-6 pb-10">
