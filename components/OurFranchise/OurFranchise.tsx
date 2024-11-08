@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { StaticHeader, StaticText, FranchisesEmblaCarousel } from "../index";
+import { StaticHeader, StaticText } from "../index";
 import { blackFridaySale } from "@/public/icons/index";
 import Image from "next/image";
 import { EmblaOptionsType } from "embla-carousel";
 import "../CSS/embla.css";
 
-const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+// const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 
 const OurFranchise = () => {
   return (
@@ -20,7 +20,7 @@ const OurFranchise = () => {
           КРАЩІ З КРАЩИХ
         </StaticHeader>
         {/* Carousel */}
-        <FranchisesEmblaCarousel options={OPTIONS} />
+        {/* <FranchisesEmblaCarousel options={OPTIONS} /> */}
         <div>
           <Image
             src={blackFridaySale}

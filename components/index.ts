@@ -21,7 +21,6 @@ export { default as NumberOfFranchises } from "./WhyFranchise/NumberOfFranchises
 
 // Our franchise
 export { default as OurFranchise } from "./OurFranchise/OurFranchise";
-export { default as FranchisesEmblaCarousel } from "./OurFranchise/FranchisesEmblaCarousel";
 
 // ButRightNow
 export { default as ButRightNow } from "./BuyRightNow/ButRightNow";
