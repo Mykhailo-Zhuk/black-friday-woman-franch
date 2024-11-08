@@ -4,10 +4,17 @@
 
 html,
 body {
+  box-sizing: border-box;
   min-height: 100vh;
   scroll-behavior: smooth;
   color: var(--foreground);
   background: var(--background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 @layer base {

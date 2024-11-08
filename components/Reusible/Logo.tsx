@@ -1,20 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import { logo, logoLight } from "@/public/icons/index";
+import { logo, logoWhite } from "@/public/icons/index";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-type LogoProps = { width?: number; height?: number; light?: boolean; className?: string };
+type LogoProps = { width?: number; height?: number; white?: boolean; className?: string };
 
-const Logo = ({ width, height, light, className }: LogoProps) => {
+const Logo = ({ width, height, white, className }: LogoProps) => {
   return (
-    <div className={twMerge("max-w-44 sm:max-w-60", className)}>
+    <div className={twMerge("max-w-24 sm:max-w-44", className)}>
       <Link href="/">
         <Image
-          src={light ? logoLight : logo}
+          src={white ? logoWhite : logo}
           alt="Logo of the site"
-          width={width ?? logoLight.width}
-          height={height ?? logoLight.height}
+          width={width ?? white ? logoWhite.width : logo.width}
+          height={height ?? white ? logoWhite.height : logo.height}
           priority
           className="w-full h-full object-contain cursor-pointer"
         />

@@ -4,8 +4,9 @@ import {
   Header,
   WhyFranchise,
   NumberOfFranchises,
-  DetailedAnalysis,
-  CountdownTimer,
+  // OurFranchise,
+  ButRightNow,
+  HowItWork,
 } from "@/components/index";
 
 export default function Home() {
@@ -13,11 +14,12 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <BlackFridayLifeChanger />
       <WhyFranchise />
+      <BlackFridayLifeChanger />
       <NumberOfFranchises />
-      <DetailedAnalysis />
-      <CountdownTimer />
+      {/* <OurFranchise /> */}
+      <ButRightNow />
+      <HowItWork />
     </>
   );
 }

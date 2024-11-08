@@ -5,9 +5,11 @@ import { twMerge } from "tailwind-merge";
 const BackgroundImage = ({
   backgroundImage,
   imageClassName,
+  aclipse = false,
 }: {
   backgroundImage: StaticImageData;
   imageClassName?: string;
+  aclipse?: boolean;
 }) => {
   return (
     <div className="absolute inset-0 -z-10 flex justify-center items-center overflow-hidden">
@@ -16,7 +18,7 @@ const BackgroundImage = ({
         alt={backgroundImage.src}
         className={twMerge("h-full w-full object-cover", imageClassName)}
       />
-      <div className="absolute inset-0 bg-black/70"></div>
+      {aclipse ? <div className="absolute inset-0 bg-black/70" /> : null}
     </div>
   );
 };
