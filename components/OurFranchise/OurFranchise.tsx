@@ -4,7 +4,7 @@ import React from "react";
 import { StaticHeader, StaticText } from "../index";
 import { blackFridaySale } from "@/public/icons/index";
 import Image from "next/image";
-import { EmblaOptionsType } from "embla-carousel";
+// import { EmblaOptionsType } from "embla-carousel";
 import "../CSS/embla.css";
 
 // const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
