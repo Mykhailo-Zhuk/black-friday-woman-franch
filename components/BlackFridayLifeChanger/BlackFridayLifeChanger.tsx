@@ -1,13 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { BlackFridayLifeChangerBackground } from "@/public/images/index";
+import { BlackFridayLifeChangerBackground, blackFridayLifeChangerPc } from "@/public/images/index";
 import { ActionButton, BackgroundImage, StaticHeader, StaticText } from "../index";
 import { blackBox } from "@/public/icons/index";
+import { useMediaQuery } from "react-responsive";
 
 const BlackFridayLifeChanger = () => {
+  const isTablet = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
   return (
     <section>
-      <div className="max-w-xl mx-auto">
+      <div className="container mx-auto">
         <div className="relative px-5 py-10">
           <div className="h-0.5 w-1/3 bg-[#e4dcdc] mb-10" />
           <StaticHeader className="text-white mt-56">
@@ -46,7 +50,14 @@ const BlackFridayLifeChanger = () => {
           </div>
 
           {/* Background image */}
-          <BackgroundImage backgroundImage={BlackFridayLifeChangerBackground} aclipse />
+          {!isTablet && (
+            <BackgroundImage
+              backgroundImage={BlackFridayLifeChangerBackground}
+              red
+              imageClassName="object-top"
+            />
+          )}
+          {isTablet && <BackgroundImage backgroundImage={blackFridayLifeChangerPc} />}
         </div>
       </div>
     </section>

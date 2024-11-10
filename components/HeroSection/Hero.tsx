@@ -1,41 +1,73 @@
 import React from "react";
+import { BackgroundImage, StaticHeader } from "../index";
+import { bottomRedStrap, heroBg, womenHero } from "@/public/images/index";
+import { blackFridayIcon, blackFridaySale, heroBoxLeft, heroBoxRight } from "@/public/icons";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <section>
-      <div className="max-w-xl mx-auto">
-        <div className="relative px-5 py-10 min-h-[90vh] bg-black text-white overflow-hidden">
-          <h1 className="text-6xl base:text-[86px] uppercase text-center mt-8 relative z-10">
-            BLACK
-            <span className="text-xs absolute right-[80px] top-[17px] bg-red-600 px-0.5 before:content-[''] before:absolute before:left-[-8px] before:top-0 before:border-l-8 before:border-l-transparent before:border-r-0 before:h-full border-t-0 before:border-r-transparent before:border-t-[16px] before:border-t-red-600">
-              Friday
-            </span>
-          </h1>
-          <p className="font-medium text-xs uppercase text-center mt-8 relative z-10">
-            ваша успішна кар&apos;єра розпочнеться у цю пятницю!
-          </p>
-          {/* Background image */}
-          {/* <div className="flex justify-center">
+      <div className="relative container mx-auto">
+        <div className="relative pt-10 text-white overflow-hidden">
+          <div className="mt-16 px-5">
             <Image
-              src={heroBackground}
-              width={heroBackground.width}
-              height={heroBackground.height}
-              alt="hero box with gift"
-              className="object-contain relative z-10"
+              src={blackFridayIcon}
+              alt={blackFridayIcon.src}
+              width={blackFridayIcon.width}
+              height={blackFridayIcon.height}
+              className="object-contain w-full"
             />
-          </div> */}
-          {/* <Image
-            src={saleStraps}
-            alt={saleStraps.src}
-            width={saleStraps.width}
-            height={saleStraps.height}
-            className="object-cover w-full absolute top-1/2 -translate-y-1/2 left-0 z-0"
-          /> */}
-          <p className="uppercase text-center text-[10px] text-white z-10 mt-10">
-            спеціальні ціни на найкращі франшизи від{" "}
-            <span className="text-red-600">woman franch</span>
-          </p>
+          </div>
+          <div className="relative top-16 base:top-20">
+            <Image
+              src={womenHero}
+              alt={womenHero.src}
+              width={womenHero.width}
+              height={womenHero.height}
+              className="relative object-contain w-full z-[11]"
+            />
+            <Image
+              src={blackFridaySale}
+              alt={blackFridaySale.src}
+              width={blackFridaySale.width}
+              height={blackFridaySale.height}
+              className="object-contain w-full absolute top-0 z-10"
+            />
+          </div>
+          <div className="relative flex flex-col justify-center items-center h-1/3 pb-10 z-20">
+            <StaticHeader className="text-center text-white font-semibold mt-16 relative z-20 px-5">
+              ваша успішна кар&apos;єра розпочнеться у цю пятницю!
+            </StaticHeader>
+            <StaticHeader className="text-center text-white relative z-20 mt-4 px-5">
+              спеціальні ціни на найкращі франшизи від{" "}
+              <span className="font-bold">woman franch</span>
+            </StaticHeader>
+            <div className="absolute bottom-0 left-0 right-0 max-h-60">
+              <Image
+                src={bottomRedStrap}
+                alt={bottomRedStrap.src}
+                width={bottomRedStrap.width}
+                height={bottomRedStrap.height}
+                className="object-contain w-full"
+              />
+            </div>
+            <Image
+              src={heroBoxRight}
+              alt={heroBoxRight.src}
+              width={75}
+              height={70}
+              className="object-contain absolute -top-10 right-0 z-10"
+            />
+            <Image
+              src={heroBoxLeft}
+              alt={heroBoxLeft.src}
+              width={75}
+              height={70}
+              className="object-contain absolute bottom-0 left-0 z-10"
+            />
+          </div>
         </div>
+        <BackgroundImage backgroundImage={heroBg} />
       </div>
     </section>
   );

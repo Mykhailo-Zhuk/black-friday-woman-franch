@@ -29,7 +29,7 @@ const statistics = [
 const NumberOfFranchises = () => {
   return (
     <section>
-      <div className="max-w-xl mx-auto pt-5">
+      <div className="container mx-auto pt-5">
         <div className="py-10">
           <div className="px-5">
             <StaticHeader>

@@ -7,7 +7,7 @@ import Image from "next/image";
 const ButRightNow = () => {
   return (
     <section>
-      <div className="relative max-w-xl mx-auto py-5">
+      <div className="relative container mx-auto py-5">
         <div className="relative p-5 max-w-[80%] mx-auto">
           <StaticHeader className="uppercase text-center font-semibold text-white">
             ПРИДБАЙТЕ ФРАНШИЗУ ПРОСТО ЗАРАЗ!

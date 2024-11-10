@@ -3,7 +3,7 @@ import { StaticText, StaticHeader } from "../index";
 
 const IdeasSuggestions = () => {
   return (
-    <div className="max-w-xl mx-auto">
+    <div className="container mx-auto">
       <div className="py-10">
         <div className="h-0.5 w-1/3 bg-[#e3dcdc] mb-10 ml-5" />
         <StaticHeader className="px-5">

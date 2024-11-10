@@ -1,27 +1,25 @@
-import heroBackground from "./hero-background.webp";
-import questionMarks from "./qustion-mark-above-head.webp";
 import BlackFridayLifeChangerBackground from "./life-changer-background.png";
-import ideasSuggestionsBackground from "./ideas-suggestions-bg.webp";
-import trolleyWithMoney from "./trolley-with-money.webp";
 import detailedAnalysisBackground from "./detailed-analysis-background.webp";
-import detailedAnalysisWoman from "./detailed-analysis-woman.webp";
 import whyFranchiseBackground from "./why-franchise-background.webp";
-import numberOfFranchises from "./number-of-franchises.webp";
-import numberOfFranchisesBoy from "./number-of-franchises-boy.webp";
 import buyRightNow from "./buy-right-now-background.png";
 import howItWork from "./howItWorkBackground.png";
+import heroBg from "./hero-bg.png";
+import bottomRedStrap from "./bottom-red-strap.png";
+import womenHero from "./women-hero.png";
+import butRightNowPc from "./but-right-now-pc.png";
+import blackFridayLifeChangerPc from "./black-friday-life-changer-pc.png";
+import heroBackgroundPc from "./hero-pc.png";
 
 export {
+  butRightNowPc,
+  blackFridayLifeChangerPc,
+  heroBackgroundPc,
+  womenHero,
+  bottomRedStrap,
+  heroBg,
   howItWork,
-  numberOfFranchisesBoy,
   buyRightNow,
   whyFranchiseBackground,
-  numberOfFranchises,
-  detailedAnalysisWoman,
   detailedAnalysisBackground,
-  heroBackground,
   BlackFridayLifeChangerBackground,
-  questionMarks,
-  ideasSuggestionsBackground,
-  trolleyWithMoney,
 };

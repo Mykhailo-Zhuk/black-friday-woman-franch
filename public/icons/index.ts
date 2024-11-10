@@ -10,7 +10,6 @@ import uCook from "./u-cook.png";
 import logoLight from "./franch-logo-light.png";
 import logoWhite from "./logo-white.png";
 import heroBox from "./hero-box.png";
-import saleStraps from "./sale-straps.png";
 import blackFridayPinkIcon from "./black-friday-pink-icon.webp";
 import blackBox from "./black-box.png";
 import ukraine from "./ukraine-map.png";
@@ -26,8 +25,16 @@ import check from "./check.png";
 import receive from "./receive.png";
 import sign from "./sign.png";
 import start from "./start.png";
+import heroBoxRight from "./hero-box-right.png";
+import heroBoxLeft from "./hero-box-left.png";
+import blackFridayIcon from "./black-friday-icon.png";
+import blackFridayStraight from "./black-box-straight.png";
 
 export {
+  blackFridayStraight,
+  heroBoxLeft,
+  heroBoxRight,
+  blackFridayIcon,
   check,
   receive,
   sign,
@@ -43,7 +50,6 @@ export {
   shoppingCart,
   blackFridayPinkIcon,
   blackBox,
-  saleStraps,
   heroBox,
   logoWhite,
   barKvitka,

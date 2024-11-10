@@ -8,7 +8,7 @@ type LogoProps = { width?: number; height?: number; white?: boolean; className?:
 
 const Logo = ({ width, height, white, className }: LogoProps) => {
   return (
-    <div className={twMerge("max-w-24 sm:max-w-44", className)}>
+    <div className={twMerge("max-w-24", className)}>
       <Link href="/">
         <Image
           src={white ? logoWhite : logo}

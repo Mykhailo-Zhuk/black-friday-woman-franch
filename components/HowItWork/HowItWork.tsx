@@ -1,5 +1,5 @@
 import React from "react";
-import { ActionButton, BackgroundImage, StaticHeader, StaticText } from "../index";
+import { ActionButton, BackgroundImage, Logo, StaticHeader, StaticText } from "../index";
 import { howItWork } from "@/public/images/index";
 import { check, consult, receive, request, sign, start } from "@/public/icons/index";
 import Image from "next/image";
@@ -21,10 +21,13 @@ const howItWorkList = [
 const HowItWork = () => {
   return (
     <section>
-      <div className="relative max-w-xl mx-auto">
+      <div className="relative container mx-auto">
         <div className="p-5">
-          <StaticHeader className="text-center">ЯК ЦЕ ВІДБУВАЄТЬСЯ?</StaticHeader>
-          <ul className="flex flex-wrap justify-center">
+          <div className="flex justify-center">
+            <Logo />
+          </div>
+          <StaticHeader className="text-center mt-6">ЯК ЦЕ ВІДБУВАЄТЬСЯ?</StaticHeader>
+          <ul className="flex flex-wrap justify-center mt-6">
             {howItWorkList.map((item, index) => {
               return (
                 <li key={item.id} className="flex flex-col space-y-2 p-1 w-1/3">

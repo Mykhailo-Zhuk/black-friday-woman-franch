@@ -4,9 +4,12 @@ import {
   Header,
   WhyFranchise,
   NumberOfFranchises,
-  // OurFranchise,
+  OurFranchise,
   ButRightNow,
   HowItWork,
+  SignForm,
+  FranchVideoReviews,
+  Footer,
 } from "@/components/index";
 
 export default function Home() {
@@ -17,9 +20,12 @@ export default function Home() {
       <WhyFranchise />
       <BlackFridayLifeChanger />
       <NumberOfFranchises />
-      {/* <OurFranchise /> */}
+      <OurFranchise />
       <ButRightNow />
       <HowItWork />
+      <SignForm />
+      <FranchVideoReviews />
+      <Footer />
     </>
   );
 }

@@ -1,26 +1,26 @@
 "use client";
 
 import React from "react";
-import { StaticHeader, StaticText } from "../index";
+import { FranchisesEmblaCarousel, StaticHeader, StaticText } from "../index";
 import { blackFridaySale } from "@/public/icons/index";
 import Image from "next/image";
-// import { EmblaOptionsType } from "embla-carousel";
+import { EmblaOptionsType } from "embla-carousel";
 import "../CSS/embla.css";
 
-// const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 
 const OurFranchise = () => {
   return (
     <section>
-      <div className="max-w-xl mx-auto pb-10">
-        <StaticHeader className="px-5">
+      <div className="container mx-auto pb-10">
+        <StaticHeader className="px-5 mb-6">
           ФРАНШИЗИ <br />
           <span className="font-semibold">WOMAN FRANCH –</span>
           <br />
           КРАЩІ З КРАЩИХ
         </StaticHeader>
         {/* Carousel */}
-        {/* <FranchisesEmblaCarousel options={OPTIONS} /> */}
+        <FranchisesEmblaCarousel options={OPTIONS} />
         <div>
           <Image
             src={blackFridaySale}
