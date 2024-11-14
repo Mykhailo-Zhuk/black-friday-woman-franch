@@ -1,13 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { BlackFridayLifeChangerBackground, blackFridayLifeChangerPc } from "@/public/images/index";
-import { ActionButton, BackgroundImage, StaticHeader, StaticText } from "../index";
+import {
+  ActionButton,
+  BackgroundImage,
+  DialogModule,
+  DownloadForm,
+  StaticHeader,
+  StaticText,
+} from "../index";
 import { blackBox } from "@/public/icons/index";
 import { useMediaQuery } from "react-responsive";
+import { Button } from "../ui/button";
 
 const BlackFridayLifeChanger = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   const isTablet = useMediaQuery({
     query: "(min-width: 768px)",
   });
@@ -51,6 +64,20 @@ const BlackFridayLifeChanger = () => {
               className="object-contain absolute top-0 right-0"
             />
           </div>
+          <Button
+            variant="link"
+            className="mt-6 text-xs xl:text-base font-normal text-white tracking-wide leading-tight hover:underline p-0"
+            onClick={() => setIsOpen(true)}>
+            Завантажити презентацію
+          </Button>
+
+          <DialogModule title="Завантажити презентацію" onClose={handleClose} isOpen={isOpen}>
+            <DownloadForm
+              fileUrl="/files/presentation.pdf"
+              onClose={handleClose}
+              type="presentation"
+            />
+          </DialogModule>
 
           {/* Background image */}
           {!isTablet && (

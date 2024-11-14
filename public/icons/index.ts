@@ -29,8 +29,12 @@ import heroBoxRight from "./hero-box-right.png";
 import heroBoxLeft from "./hero-box-left.png";
 import blackFridayIcon from "./black-friday-icon.png";
 import blackFridayStraight from "./black-box-straight.png";
+import consultant from "./consultant.png";
+import transparentBlackBox from "./transparent-black-box.png";
 
 export {
+  transparentBlackBox,
+  consultant,
   blackFridayStraight,
   heroBoxLeft,
   heroBoxRight,

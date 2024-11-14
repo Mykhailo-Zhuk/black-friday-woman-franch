@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { ActionButton, CountdownTimer, Logo, StaticText } from "../index";
 import { useMediaQuery } from "react-responsive";
+import NavigationDropdownMenu from "./DropdownMenu";
 
 const Header = () => {
   const isTablet = useMediaQuery({
@@ -16,7 +16,7 @@ const Header = () => {
     <header className="fixed top-0 left-1/2 -translate-x-1/2 container w-full bg-black/5 backdrop-blur-sm shadow-lg z-50">
       <div className="px-5 py-1 flex justify-between md:justify-start space-x-10 items-center h-12">
         <Logo white width={96} height={36} />
-        {!isTablet && <RxHamburgerMenu size={24} className="text-white" />}
+        {!isTablet && <NavigationDropdownMenu />}
         {isTablet && (
           <div
             className="

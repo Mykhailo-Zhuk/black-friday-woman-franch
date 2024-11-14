@@ -1,12 +1,24 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-const DownloadButton = () => {
+const DownloadButton = ({
+  file,
+  children,
+  className,
+}: {
+  file: string;
+  children: string;
+  className?: string;
+}) => {
   return (
     <a
-      href="/files/sample.pdf" // Path to your PDF file in the public directory
-      download="sample.pdf" // Specify the download filename
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-      Download PDF
+      href={`/files/${file}`}
+      download={file}
+      className={twMerge(
+        "text-xs xl:text-base font-normal text-[#100f0d] tracking-wide leading-tight",
+        className,
+      )}>
+      {children}
     </a>
   );
 };

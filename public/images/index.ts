@@ -9,8 +9,12 @@ import womenHero from "./women-hero.png";
 import butRightNowPc from "./but-right-now-pc.png";
 import blackFridayLifeChangerPc from "./black-friday-life-changer-pc.png";
 import heroBackgroundPc from "./hero-pc.png";
+import signFormBackgroundPc from "./sign-form-background-pc.jpg";
+import signFormBackground from "./sign-form-background.jpg";
 
 export {
+  signFormBackgroundPc,
+  signFormBackground,
   butRightNowPc,
   blackFridayLifeChangerPc,
   heroBackgroundPc,

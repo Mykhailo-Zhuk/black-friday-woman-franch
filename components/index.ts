@@ -8,6 +8,9 @@ export { default as ActionButton } from "./Reusible/ActionButton";
 export { default as HiddenText } from "./Reusible/HiddenText";
 export { default as Footer } from "./Footer";
 export { default as SocialIcons } from "./Reusible/SocialIcons";
+export { default as DownloadButton } from "./Reusible/DownloadButton";
+export { default as DialogModule } from "./Reusible/DialogModule";
+export { default as DownloadForm } from "./Reusible/DownloadForm";
 
 // Header
 export { default as Header } from "./Header/Header";

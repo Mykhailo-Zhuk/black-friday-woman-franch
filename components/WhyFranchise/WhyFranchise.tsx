@@ -1,7 +1,14 @@
-import React from "react";
-import { StaticText, StaticHeader, ActionButton } from "../index";
+"use client";
+
+import React, { useState } from "react";
+import { StaticText, StaticHeader, DialogModule, DownloadForm } from "../index";
 
 const IdeasSuggestions = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   return (
     <div className="container mx-auto">
       <div className="py-10">
@@ -57,13 +64,19 @@ const IdeasSuggestions = () => {
             </span>
           </div>
         </div>
-        <ActionButton
-          url="#black-form"
-          action="Отримайте безкоштовно покрокову інструкцію 30 кроків до відкриття власної справи"
-          className="px-2 py-1 uppercase"
-          wrapper="max-w-[85%] mx-auto"
-          internal
-        />
+        <div className="max-w-[85%] mx-auto mt-6">
+          <button
+            className="p-1 uppercase inline-block text-center max-w-fit opacity-90 bg-gradient-to-r from-[#f70202] to-[#9e1b16] text-white text-[10px] font-semibold rounded-lg shadow-2xl transition duration-150 ease-in-out transform hover:opacity-100 hover:scale-95 active:scale-90 focus:scale-95"
+            onClick={() => setIsOpen(true)}>
+            Отримайте безкоштовно покрокову інструкцію 30 кроків до відкриття власної справи
+          </button>
+        </div>
+        <DialogModule
+          title="Завантажити покрокову інструкцію"
+          onClose={handleClose}
+          isOpen={isOpen}>
+          <DownloadForm fileUrl="/files/instruction.pdf" onClose={handleClose} type="instruction" />
+        </DialogModule>
       </div>
     </div>
   );

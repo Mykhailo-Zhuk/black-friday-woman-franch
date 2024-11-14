@@ -5,9 +5,19 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   const body = await request.json();
+  let type = body.type;
+
+  if (type === "presentation") {
+    type = "презентацію";
+  } else if (type === "instruction") {
+    type = "покрокову інструкцію";
+  } else {
+    type = undefined;
+  }
 
   const newClient = {
     firstName: body.firstName,
+    lastName: body.lastName ?? undefined,
     phoneNumber: body.phoneNumber,
     email: body.email,
     message: body.message ?? undefined,
@@ -17,7 +27,7 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
       from: "Black Friday WF <onboarding@resend.dev>",
       to: ["cryptostudent2@gmail.com"],
-      subject: "Новий клієнт",
+      subject: type ? `Отримав ${type}` : "Новий клієнт",
       react: EmailTemplate(newClient),
     });
 
