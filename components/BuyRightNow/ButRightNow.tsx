@@ -16,11 +16,11 @@ const ButRightNow = () => {
           <StaticHeader className="uppercase text-center md:text-left font-semibold text-white">
             ПРИДБАЙТЕ ФРАНШИЗУ ПРОСТО ЗАРАЗ!
           </StaticHeader>
-          <StaticText className="text-center mt-6 text-white md:text-left md:max-w-sm">
+          <StaticText className="text-center text-sm mt-6 text-white md:text-left md:max-w-sm">
             Час настав! Зробіть крок до успіху просто зараз! Це не просто пропозиція, це шанс
             змінити своє життя та почати прибутковий бізнес, який має попит і стабільний ринок.
           </StaticText>
-          <StaticText className="text-center mt-3 text-white md:text-left md:max-w-sm">
+          <StaticText className="text-center text-sm mt-3 text-white md:text-left md:max-w-sm">
             Приєднуйтесь до тих, хто готовий до великих змін. Час купувати, час будувати своє завтра
             – скористайтеся шансом Чорної п’ятниці!
           </StaticText>
