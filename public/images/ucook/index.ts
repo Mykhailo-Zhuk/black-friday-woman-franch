@@ -1,5 +1,4 @@
 import ucook1 from "./ucook1.jpg";
-import ucook2 from "./ucook2.jpg";
 import ucook3 from "./ucook3.jpg";
 import ucook5 from "./ucook5.jpg";
 import ucook6 from "./ucook6.png";
@@ -15,7 +14,6 @@ import ucook15 from "./ucook15.jpg";
 
 export {
   ucook1,
-  ucook2,
   ucook3,
   ucook5,
   ucook6,

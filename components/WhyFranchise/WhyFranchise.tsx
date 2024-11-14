@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticText, StaticHeader } from "../index";
+import { StaticText, StaticHeader, ActionButton } from "../index";
 
 const IdeasSuggestions = () => {
   return (
@@ -10,11 +10,6 @@ const IdeasSuggestions = () => {
           чому саме франшиза від <span className="font-black">woman franch?</span>
         </StaticHeader>
         <div className="flex flex-col md:flex-row">
-          <StaticText className="mt-6 font-semibold px-5 md:px-7 md:w-1/2 md:ml-10 md:mr-[60px]">
-            Ми знаємо, що кожна велика справа починається з правильного вибору партнера. Обираючи
-            франшизу Woman Franch, ви отримуєте не просто готовий бізнес-проєкт, а команду
-            підтримки, яка допоможе вам на кожному кроці.
-          </StaticText>
           <div className="bg-[#e3dcdc] py-2 mt-6 md:w-1/2 md:pr-24">
             <StaticText className="uppercase px-5 font-semibold">Woman Franch — це:</StaticText>
             <StaticText className="px-5 md:font-medium">
@@ -62,6 +57,13 @@ const IdeasSuggestions = () => {
             </span>
           </div>
         </div>
+        <ActionButton
+          url="#black-form"
+          action="Отримайте безкоштовно покрокову інструкцію 30 кроків до відкриття власної справи"
+          className="px-2 py-1 uppercase"
+          wrapper="max-w-[85%] mx-auto"
+          internal
+        />
       </div>
     </div>
   );

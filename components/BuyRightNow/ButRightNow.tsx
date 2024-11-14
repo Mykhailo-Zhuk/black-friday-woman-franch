@@ -18,10 +18,7 @@ const ButRightNow = () => {
           </StaticHeader>
           <StaticText className="text-center mt-6 text-white md:text-left md:max-w-sm">
             Час настав! Зробіть крок до успіху просто зараз! Це не просто пропозиція, це шанс
-            змінити своє життя та почати прибутковий бізнес, який має попит і стабільний ринок. Лише
-            зараз ви можете отримати свою франшизу за найкращою ціною року – і це більше, ніж
-            пропозиція. Це можливість вирватись уперед, обираючи готову бізнес-модель із надійною
-            підтримкою та успішним досвідом.
+            змінити своє життя та почати прибутковий бізнес, який має попит і стабільний ринок.
           </StaticText>
           <StaticText className="text-center mt-3 text-white md:text-left md:max-w-sm">
             Приєднуйтесь до тих, хто готовий до великих змін. Час купувати, час будувати своє завтра
@@ -30,7 +27,7 @@ const ButRightNow = () => {
           <div className="flex flex-col items-center mt-6 md:flex-row md:justify-between md:items-center md:max-w-md space-x-5">
             <CountdownTimer className="mt-24 md:mt-0" />
             <ActionButton
-              url="black-form"
+              url="#black-form"
               action="КУПИТИ ЗІ ЗНИЖКОЮ"
               internal
               wrapper="mt-12 md:mt-6"

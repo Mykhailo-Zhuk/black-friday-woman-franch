@@ -24,9 +24,14 @@
 .embla__slide__video {
   position: relative;
   transform: translate3d(0, 0, 0);
-  flex: 0 0 40%;
+  flex: 0 0 80%;
   min-width: 0;
   padding-left: var(--slide-spacing);
+}
+@media (min-width: 768px) {
+  .embla__slide__video {
+    flex: 0 0 40%;
+  }
 }
 .embla__slide__img {
   border-radius: 1.8rem;

@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section>
       <div className="relative container mx-auto">
-        <div className="relative pt-10 text-white min-h-[70vh] overflow-hidden">
+        <div className="relative pt-10 text-white min-h-[60vh] overflow-hidden">
           <div className="max-w-full md:max-w-xs mt-16 md:mt-6 px-5 md:pl-14">
             <Image
               src={blackFridayIcon.src}
@@ -43,8 +43,8 @@ const Hero = () => {
               />
             </div>
           )}
-          <div className="relative flex flex-col justify-center items-center md:items-start h-1/3 pb-10 md:pb-20 z-20 md:max-w-md">
-            <StaticHeader className="text-center md:text-left text-white font-semibold mt-16 md:mt-6 relative z-20 px-5 md:pl-14">
+          <div className="relative flex flex-col justify-center items-center md:items-start h-1/3 md:pb-20 z-20 md:max-w-md">
+            <StaticHeader className="text-center base:text-sm md:text-left text-white font-semibold mt-16 md:mt-6 relative z-20 px-5 md:pl-14">
               ваша успішна кар&apos;єра розпочнеться у цю пятницю!
             </StaticHeader>
             <StaticHeader className="text-center md:text-left md:text-base font-normal text-white relative z-20 mt-4 px-5 md:pl-14 ">
@@ -92,7 +92,7 @@ const Hero = () => {
         </div>
         {!isTablet && <BackgroundImage backgroundImage={heroBg} />}
         {isTablet && (
-          <BackgroundImage backgroundImage={heroBackgroundPc} imageClassName="object-right" />
+          <BackgroundImage backgroundImage={heroBackgroundPc} imageClassName="object-bottom" />
         )}
       </div>
     </section>

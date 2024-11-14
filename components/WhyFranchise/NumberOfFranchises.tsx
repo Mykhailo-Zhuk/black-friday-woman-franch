@@ -117,6 +117,7 @@ const NumberOfFranchises = () => {
               <ActionButton
                 url="#black-form"
                 action="придбати франшизу"
+                internal
                 className="uppercase text-xs max-w-min"
               />
             </div>

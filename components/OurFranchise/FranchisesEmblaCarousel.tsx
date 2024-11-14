@@ -107,7 +107,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     {listItem.prices.map((price) => {
                       return (
                         <div key={price.id} className="flex flex-col">
-                          <StaticText className="relative text-[#959595] text-center text-[10px] md:text-sm font-medium text-nowrap">
+                          <StaticText className="relative text-[#959595] text-center max-w-min mx-auto text-[10px] md:text-sm font-medium text-nowrap">
                             {price.deprecatedPrice} $
                             <span className="bg-[#ed1d24] h-[1px] absolute w-full rotate-12 top-1.5 left-0"></span>
                             <span className="bg-[#ed1d24] h-[1px] absolute w-full -rotate-12 top-1.5 left-0"></span>
@@ -115,13 +115,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                               {price.type}
                             </span>
                           </StaticText>
-                          <StaticText className="text-[#100f0d] text-sm md:text-lg font-bold text-nowrap">
+                          <StaticText className="text-[#100f0d] text-sm text-center md:text-lg font-bold text-nowrap">
                             {price.actualPrice} $
                           </StaticText>
                         </div>
                       );
                     })}
                   </div>
+                  <StaticText className="font-semibold text-center mt-6">
+                    + відсутність РОЯЛТІ на 3 місяці
+                  </StaticText>
                 </div>
                 <ActionButton
                   url="#black-form"

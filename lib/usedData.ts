@@ -34,7 +34,6 @@ import {
 } from "@/public/images/mudrik-kindegarden";
 
 import {
-  ismart1,
   ismart2,
   ismart3,
   ismart4,
@@ -127,7 +126,6 @@ import {
 } from "@/public/images/mudrik-school";
 import {
   ucook1,
-  ucook2,
   ucook3,
   ucook5,
   ucook6,
@@ -252,7 +250,6 @@ export const FRANCHISE_LIST = [
     description:
       "Будьте першим, хто відкриє “I’m Smart” у Європі — центр раннього розвитку, що готує дітей до успіху!",
     imageSrcList: [
-      ismart1,
       ismart2,
       ismart3,
       ismart4,
@@ -275,7 +272,6 @@ export const FRANCHISE_LIST = [
       "Відкрийте студію кулінарних вражень і подаруйте людям унікальні гастрономічні емоції! Масштабуйте успіх із бізнесом, що поєднує кулінарію, творчість і незабутні враження.",
     imageSrcList: [
       ucook1,
-      ucook2,
       ucook3,
       ucook5,
       ucook6,
@@ -370,7 +366,7 @@ export const FRANCHISE_LIST = [
   },
   {
     id: "5024139006",
-    title: "КОНДИТЕРСЬКА",
+    title: "Кавʼярня - кондитерська",
     description:
       "Запустіть кондитерську кав’ярню, де кожен десерт — це шедевр! Створюйте смачний бізнес, який приносить радість і задоволення кожному гостю.",
     imageSrcList: [
@@ -389,7 +385,7 @@ export const FRANCHISE_LIST = [
       solodki13,
       solodki14,
     ],
-    promo: "Кондитерська “Солодкі історії” за ціною:",
+    promo: "Кавʼярня - кондитерська “Солодкі історії” за ціною:",
     prices: [
       { id: "8178831171", deprecatedPrice: "7 900", actualPrice: "4 900", type: "s" },
       { id: "5955469388", deprecatedPrice: "8 900", actualPrice: "5 900", type: "m" },
