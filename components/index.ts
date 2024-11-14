@@ -40,3 +40,5 @@ export { default as FranchVideoReviews } from "./FranchVideoReviews/FranchVideoR
 
 // Form
 export { default as SignForm } from "./Form/SignForm";
+export { default as FeedbackForm } from "./Form/FeedbackForm";
+export { default as FeedbackSection } from "./Form/FeedbackSection";

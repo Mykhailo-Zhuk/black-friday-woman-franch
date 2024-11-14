@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const monserat = Montserrat({
   subsets: ["latin"],
   variable: "--font-monserat",
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const openSans = Open_Sans({

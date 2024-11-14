@@ -10,7 +10,7 @@ const StaticHeader = ({
   return (
     <h1
       className={twMerge(
-        "text-sm base:text-lg uppercase text-black leading-tight font-light",
+        "text-sm base:text-lg uppercase text-black leading-tight font-medium",
         className,
       )}>
       {children}

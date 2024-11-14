@@ -2,19 +2,22 @@
 
 import React, { useCallback, useEffect, useRef } from "react";
 import { EmblaCarouselType, EmblaEventType, EmblaOptionsType } from "embla-carousel";
-import { DotButton, useDotButton } from "./EmblaCarouselDotButtons";
-import { ActionButton, FranchiseGalleryEmblaCarousel, StaticHeader, StaticText } from "../index";
 import useEmblaCarousel from "embla-carousel-react";
+import { DotButton, useDotButton } from "../OurFranchise/EmblaCarouselDotButtons";
+import { ActionButton, FranchiseGalleryEmblaCarousel, StaticHeader, StaticText } from "../index";
 import { FRANCHISE_LIST } from "@/lib/usedData";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const TWEEN_FACTOR_BASE = 0.2;
+const TWEEN_FACTOR_BASE = 0.52;
+
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max);
 
 type PropType = {
   options?: EmblaOptionsType;
 };
 
-const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
+const EmblaCarousel: React.FC<PropType> = (props) => {
   const { options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
@@ -24,7 +27,7 @@ const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
 
   const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector(".embla__parallax__layer") as HTMLElement;
+      return slideNode.querySelector(".embla__slide__scale") as HTMLElement;
     });
   }, []);
 
@@ -32,7 +35,7 @@ const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
   }, []);
 
-  const tweenParallax = useCallback((emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
+  const tweenScale = useCallback((emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
     const engine = emblaApi.internalEngine();
     const scrollProgress = emblaApi.scrollProgress();
     const slidesInView = emblaApi.slidesInView();
@@ -62,9 +65,10 @@ const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
           });
         }
 
-        const translate = diffToTarget * (-1 * tweenFactor.current) * 100;
+        const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
+        const scale = numberWithinRange(tweenValue, 0, 1).toString();
         const tweenNode = tweenNodes.current[slideIndex];
-        tweenNode.style.transform = `translateX(${translate}%)`;
+        tweenNode.style.transform = `scale(${scale})`;
       });
     });
   }, []);
@@ -74,15 +78,15 @@ const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
 
     setTweenNodes(emblaApi);
     setTweenFactor(emblaApi);
-    tweenParallax(emblaApi);
+    tweenScale(emblaApi);
 
     emblaApi
       .on("reInit", setTweenNodes)
       .on("reInit", setTweenFactor)
-      .on("reInit", tweenParallax)
-      .on("scroll", tweenParallax)
-      .on("slideFocus", tweenParallax);
-  }, [emblaApi, tweenParallax, setTweenFactor, setTweenNodes]);
+      .on("reInit", tweenScale)
+      .on("scroll", tweenScale)
+      .on("slideFocus", tweenScale);
+  }, [emblaApi, tweenScale]);
 
   return (
     <div className="embla">
@@ -90,51 +94,49 @@ const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {FRANCHISE_LIST.map((listItem) => (
             <div className="embla__slide" key={listItem.id}>
-              <div className="embla__parallax">
-                <div className="embla__parallax__layer flex-col bg-[#e4dcdc] rounded-xl p-5">
-                  <div className="h-[97%]">
-                    <StaticHeader>{listItem.title}</StaticHeader>
-                    <StaticText className="mt-6">{listItem.description}</StaticText>
-                    <FranchiseGalleryEmblaCarousel
-                      slides={listItem.imageSrcList}
-                      options={OPTIONS}
-                    />
-                    <StaticText className="mt-6 text-center uppercase">{listItem.promo}</StaticText>
-                    <div className="flex justify-center gap-1 space-x-1 mt-6">
-                      {listItem.prices.map((price) => {
-                        return (
-                          <div key={price.id} className="flex flex-col">
-                            <StaticText className="relative text-[#959595] text-center  text-[10px] font-medium text-nowrap">
-                              {price.deprecatedPrice} $
-                              <span className="bg-[#ed1d24] h-[1px] absolute w-full rotate-12 top-1.5 left-0"></span>
-                              <span className="bg-[#ed1d24] h-[1px] absolute w-full -rotate-12 top-1.5 left-0"></span>
-                              <span className="absolute text-3xl text-white uppercase -bottom-1 -left-1 font-bold -z-10">
-                                {price.type}
-                              </span>
-                            </StaticText>
-                            <StaticText className="text-[#100f0d] text-sm font-bold text-nowrap">
-                              {price.actualPrice} $
-                            </StaticText>
-                          </div>
-                        );
-                      })}
-                    </div>
+              <div className="embla__slide__scale flex-col bg-[#e4dcdc] rounded-xl p-5">
+                <div className="h-[97%]">
+                  <StaticHeader>{listItem.title}</StaticHeader>
+                  <StaticText className="mt-6">{listItem.description}</StaticText>
+
+                  {/* Interal carousel */}
+                  <FranchiseGalleryEmblaCarousel slides={listItem.imageSrcList} options={OPTIONS} />
+
+                  <StaticText className="mt-6 text-center uppercase">{listItem.promo}</StaticText>
+                  <div className="flex justify-center gap-1 space-x-1 mt-6">
+                    {listItem.prices.map((price) => {
+                      return (
+                        <div key={price.id} className="flex flex-col">
+                          <StaticText className="relative text-[#959595] text-center text-[10px] md:text-sm font-medium text-nowrap">
+                            {price.deprecatedPrice} $
+                            <span className="bg-[#ed1d24] h-[1px] absolute w-full rotate-12 top-1.5 left-0"></span>
+                            <span className="bg-[#ed1d24] h-[1px] absolute w-full -rotate-12 top-1.5 left-0"></span>
+                            <span className="absolute text-3xl text-white uppercase -bottom-1 -left-1 font-bold -z-10">
+                              {price.type}
+                            </span>
+                          </StaticText>
+                          <StaticText className="text-[#100f0d] text-sm md:text-lg font-bold text-nowrap">
+                            {price.actualPrice} $
+                          </StaticText>
+                        </div>
+                      );
+                    })}
                   </div>
-                  <ActionButton
-                    url="#black-form"
-                    internal
-                    action="ОТРИМАТИ ІНФОРМАЦІЮ ПРО ФРАНШИЗУ"
-                    className="max-w-fit text-xs px-3 py-1"
-                    wrapper="h-auto"
-                  />
                 </div>
+                <ActionButton
+                  url="#black-form"
+                  internal
+                  action="ОТРИМАТИ ІНФОРМАЦІЮ ПРО ФРАНШИЗУ"
+                  className="max-w-fit text-xs px-3 py-1"
+                  wrapper="h-auto"
+                />
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="embla__controls" style={{ margin: "16px 0" }}>
+      <div className="embla__controls">
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
@@ -151,4 +153,4 @@ const FranchisesEmblaCarousel: React.FC<PropType> = (props) => {
   );
 };
 
-export default FranchisesEmblaCarousel;
+export default EmblaCarousel;

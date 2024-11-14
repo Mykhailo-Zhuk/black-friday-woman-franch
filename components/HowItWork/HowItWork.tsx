@@ -1,5 +1,5 @@
 import React from "react";
-import { ActionButton, BackgroundImage, Logo, StaticHeader, StaticText } from "../index";
+import { ActionButton, BackgroundImage, StaticHeader, StaticText } from "../index";
 import { howItWork } from "@/public/images/index";
 import { check, consult, receive, request, sign, start } from "@/public/icons/index";
 import Image from "next/image";
@@ -23,9 +23,6 @@ const HowItWork = () => {
     <section>
       <div className="relative container mx-auto">
         <div className="p-5">
-          <div className="flex justify-center">
-            <Logo />
-          </div>
           <StaticHeader className="text-center mt-6">ЯК ЦЕ ВІДБУВАЄТЬСЯ?</StaticHeader>
           <ul className="flex flex-wrap justify-center mt-6">
             {howItWorkList.map((item, index) => {
@@ -35,7 +32,7 @@ const HowItWork = () => {
                   <div className="flex justify-center items-center mt-1">
                     <Image
                       src={item.imageSrc}
-                      alt={item.imageSrc.src}
+                      alt={"howItWork item with id " + item.id}
                       width={34}
                       height={41}
                       className="object-contain"

@@ -13,18 +13,15 @@ const OurFranchise = () => {
   return (
     <section>
       <div className="container mx-auto pb-10">
-        <StaticHeader className="px-5 mb-6">
-          ФРАНШИЗИ <br />
-          <span className="font-semibold">WOMAN FRANCH –</span>
-          <br />
-          КРАЩІ З КРАЩИХ
+        <StaticHeader className="px-5 mb-6 md:px-14 max-w-[220px] md:max-w-full">
+          ФРАНШИЗИ <span className="font-semibold">WOMAN FRANCH –</span> КРАЩІ З КРАЩИХ
         </StaticHeader>
         {/* Carousel */}
         <FranchisesEmblaCarousel options={OPTIONS} />
         <div>
           <Image
-            src={blackFridaySale}
-            alt={blackFridaySale.src}
+            src={blackFridaySale.src}
+            alt="Black friday sale strap"
             width={blackFridaySale.width}
             height={blackFridaySale.height}
             className="object-contain w-full"

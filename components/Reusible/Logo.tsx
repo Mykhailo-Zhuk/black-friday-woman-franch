@@ -11,7 +11,7 @@ const Logo = ({ width, height, white, className }: LogoProps) => {
     <div className={twMerge("max-w-24", className)}>
       <Link href="/">
         <Image
-          src={white ? logoWhite : logo}
+          src={white ? logoWhite.src : logo.src}
           alt="Logo of the site"
           width={width ?? white ? logoWhite.width : logo.width}
           height={height ?? white ? logoWhite.height : logo.height}

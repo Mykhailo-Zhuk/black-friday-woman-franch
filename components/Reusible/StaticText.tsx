@@ -11,7 +11,7 @@ const StaticText = ({
   return (
     <p
       className={twMerge(
-        "text-xs font-light text-[#100f0d] tracking-wide leading-tight",
+        "text-xs xl:text-base font-normal text-[#100f0d] tracking-wide leading-tight",
         className,
       )}>
       {children}

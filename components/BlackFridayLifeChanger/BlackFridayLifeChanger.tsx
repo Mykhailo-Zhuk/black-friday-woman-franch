@@ -11,23 +11,24 @@ const BlackFridayLifeChanger = () => {
   const isTablet = useMediaQuery({
     query: "(min-width: 768px)",
   });
+
   return (
     <section>
       <div className="container mx-auto">
-        <div className="relative px-5 py-10">
-          <div className="h-0.5 w-1/3 bg-[#e4dcdc] mb-10" />
-          <StaticHeader className="text-white mt-56">
+        <div className="relative px-5 py-10 md:px-14">
+          <div className="h-0.5 w-1/3 bg-[#e4dcdc] mb-10 md:hidden" />
+          <StaticHeader className="text-white mt-6 md:mt-0 max-w-sm">
             «Чорна П&apos;ятниця» — шанс, який змінить ваше життя!
           </StaticHeader>
-          <StaticText className="mt-6 text-white font-semibold">
+          <StaticText className="mt-6 text-white font-semibold max-w-sm">
             Настав момент для рішучого кроку — ідеальний час перестати відкладати на завтра свою
             мрію про власний бізнес.
           </StaticText>
-          <StaticText className="mt-6 text-white font-semibold">
+          <StaticText className="mt-6 text-white font-semibold max-w-sm">
             Цього Чорної П&apos;ятниці Woman Frаnch відкриває двері для тих, хто готовий змінити
             своє життя раз і назавжди.
           </StaticText>
-          <StaticText className="text-white mt-6">
+          <StaticText className="text-white mt-6 max-w-sm">
             Ми пропонуємо унікальну можливість стати частиною бренду, який забезпечує успіх, навіть
             якщо ви ще не маєте досвіду у бізнесі. Це момент, коли зміни відбуваються тут і зараз,
             коли ціна вашого майбутнього успіху стала{" "}
@@ -43,8 +44,8 @@ const BlackFridayLifeChanger = () => {
               internal
             />
             <Image
-              src={blackBox}
-              alt={blackBox.src}
+              src={blackBox.src}
+              alt="black box"
               width={125}
               height={121}
               className="object-contain absolute top-0 right-0"

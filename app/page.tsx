@@ -10,11 +10,12 @@ import {
   SignForm,
   FranchVideoReviews,
   Footer,
+  FeedbackSection,
 } from "@/components/index";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Header />
       <Hero />
       <WhyFranchise />
@@ -24,8 +25,9 @@ export default function Home() {
       <ButRightNow />
       <HowItWork />
       <SignForm />
+      <FeedbackSection formId="black-form" />
       <FranchVideoReviews />
       <Footer />
-    </>
+    </div>
   );
 }

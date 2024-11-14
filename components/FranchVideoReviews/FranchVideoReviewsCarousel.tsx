@@ -36,7 +36,7 @@ const FranchVideoReviewsCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((item, index) => (
-            <div className="embla__slide" key={index}>
+            <div className="embla__slide__video" key={index}>
               <VideoBlock videoSrc={item} />
             </div>
           ))}
