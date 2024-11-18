@@ -15,12 +15,12 @@ const MainFooter = () => {
           <SocialIcons color="text-white" />
           <ul className="flex flex-col sm:flex-row gap-1 space-x-1 justify-center items-center mt-6">
             <li>
-              <Link href="policy" className="text-center hover:underline text-white">
+              <Link href="#policy" className="text-center hover:underline text-white">
                 Політика конфіденційності
               </Link>
             </li>
             <li>
-              <Link href="temps-of-use" className="text-center hover:underline text-white">
+              <Link href="#temps-of-use" className="text-center hover:underline text-white">
                 Умови використання
               </Link>
             </li>
