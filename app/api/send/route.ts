@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Black Friday WF <onboarding@resend.dev>",
-      to: ["cryptostudent2@gmail.com"],
+      to: ["mwwomanfranch@gmail.com"],
       subject: type ? `Отримав ${type}` : "Новий клієнт",
       react: EmailTemplate(newClient),
     });
