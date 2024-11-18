@@ -68,7 +68,7 @@ const IdeasSuggestions = () => {
           <button
             className="p-1 uppercase inline-block text-center max-w-fit opacity-90 bg-gradient-to-r from-[#f70202] to-[#9e1b16] text-white text-[10px] font-semibold rounded-lg shadow-2xl transition duration-150 ease-in-out transform hover:opacity-100 hover:scale-95 active:scale-90 focus:scale-95"
             onClick={() => setIsOpen(true)}>
-            Отримайте безкоштовно покрокову інструкцію "30 кроків до відкриття власної справи"
+            Отримайте безкоштовно покрокову інструкцію &quot;30 кроків до відкриття власної справи&quot;
           </button>
         </div>
         <DialogModule
